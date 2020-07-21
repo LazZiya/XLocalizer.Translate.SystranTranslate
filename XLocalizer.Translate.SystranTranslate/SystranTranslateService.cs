@@ -11,7 +11,7 @@ namespace XLocalizer.Translate.SystranTranslate
     /// <summary>
     /// SYSTRAN.io translation service
     /// </summary>
-    public class SystranStringTranslator : IStringTranslator
+    public class SystranTranslateService : ITranslator
     {
         /// <summary>
         /// Service name
@@ -28,7 +28,7 @@ namespace XLocalizer.Translate.SystranTranslate
         /// <param name="httpClient"></param>
         /// <param name="configuration"></param>
         /// <param name="logger"></param>
-        public SystranStringTranslator(HttpClient httpClient, IConfiguration configuration, ILogger<SystranStringTranslator> logger)
+        public SystranTranslateService(HttpClient httpClient, IConfiguration configuration, ILogger<SystranTranslateService> logger)
         {
             _httpClient = httpClient;
             _rapidApiKey = configuration["XLocalizer.TranslationServices:RapidApiKey"];
