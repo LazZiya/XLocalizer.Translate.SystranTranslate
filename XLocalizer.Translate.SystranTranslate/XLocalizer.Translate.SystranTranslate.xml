@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XLocalizer.Translate.SystranTranslate</name>
+    </assembly>
+    <members>
+        <member name="T:XLocalizer.Translate.SystranTranslate.SystranTranslateResult">
+            <summary>
+            SYSTRAN.io translate result
+            </summary>
+        </member>
+        <member name="P:XLocalizer.Translate.SystranTranslate.SystranTranslateResult.Outputs">
+            <summary>
+            Outputs
+            </summary>
+        </member>
+        <member name="T:XLocalizer.Translate.SystranTranslate.SystranResultOutput">
+            <summary>
+            translate result output
+            </summary>
+        </member>
+        <member name="P:XLocalizer.Translate.SystranTranslate.SystranResultOutput.Output">
+            <summary>
+            Output translated text
+            </summary>
+        </member>
+        <member name="T:XLocalizer.Translate.SystranTranslate.SystranStringTranslator">
+            <summary>
+            SYSTRAN.io translation service
+            </summary>
+        </member>
+        <member name="P:XLocalizer.Translate.SystranTranslate.SystranStringTranslator.ServiceName">
+            <summary>
+            Service name
+            </summary>
+        </member>
+        <member name="M:XLocalizer.Translate.SystranTranslate.SystranStringTranslator.#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{XLocalizer.Translate.SystranTranslate.SystranStringTranslator})">
+            <summary>
+            Initialize SYSTRAN.io translate service
+            </summary>
+            <param name="httpClient"></param>
+            <param name="configuration"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:XLocalizer.Translate.SystranTranslate.SystranStringTranslator.TranslateAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            Run async translation task
+            </summary>
+            <param name="source">Source language e.g. en</param>
+            <param name="target">Target language e.g. tr</param>
+            <param name="text">Text to be translated</param>
+            <param name="format">Text format: html or text</param>
+            <returns><see cref="T:XLocalizer.Translate.TranslationResult"/></returns>
+        </member>
+        <member name="M:XLocalizer.Translate.SystranTranslate.SystranStringTranslator.TryTranslate(System.String,System.String,System.String,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <param name="text"></param>
+            <param name="translation"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
