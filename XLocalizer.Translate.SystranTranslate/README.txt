@@ -7,7 +7,7 @@ Instructions to use this package :
 
 ````
 {
-  "XLocalizer.TranslationServices": {
+  "XLocalizer.Translate": {
     "RapidApiKey": "xxx-rapid-api-key-xxx"
   }
 }
@@ -15,7 +15,7 @@ Instructions to use this package :
 
 - Register in startup:
 ````
-services.AddHttpClient<ITranslationService, SystranTranslateService>();
+services.AddHttpClient<ITranslator, SystranTranslateService>();
 ````
 
 Repository: https://github.com/LazZiya/TranslationServices

@@ -31,7 +31,7 @@ namespace XLocalizer.Translate.SystranTranslate
         public SystranTranslateService(HttpClient httpClient, IConfiguration configuration, ILogger<SystranTranslateService> logger)
         {
             _httpClient = httpClient;
-            _rapidApiKey = configuration["XLocalizer.TranslationServices:RapidApiKey"];
+            _rapidApiKey = configuration["XLocalizer.Translate:RapidApiKey"];
             _logger = logger;
         }
 
