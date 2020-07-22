@@ -1,4 +1,4 @@
-﻿XLocalizer.TranslationServices.SystranTranslate
+﻿XLocalizer.Translate.SystranTranslate
 
 Instructions to use this package :
 
@@ -18,4 +18,4 @@ Instructions to use this package :
 services.AddHttpClient<ITranslator, SystranTranslateService>();
 ````
 
-Repository: https://github.com/LazZiya/TranslationServices
+Repository: https://github.com/LazZiya/XLocalizer.Translate.SystranTranslate

@@ -20,7 +20,6 @@ namespace XLocalizer.Translate.SystranTranslate
 
         private readonly HttpClient _httpClient;
         private readonly ILogger _logger;
-        private readonly string _rapidApiKey;
 
         /// <summary>
         /// Initialize SYSTRAN.io translate service
@@ -30,8 +29,10 @@ namespace XLocalizer.Translate.SystranTranslate
         /// <param name="logger"></param>
         public SystranTranslateService(HttpClient httpClient, IConfiguration configuration, ILogger<SystranTranslateService> logger)
         {
-            _httpClient = httpClient;
-            _rapidApiKey = configuration["XLocalizer.Translate:RapidApiKey"];
+            _httpClient = httpClient ?? throw new NullReferenceException(nameof(httpClient));
+            var _rapidApiKey = configuration["XLocalizer.Translate:RapidApiKey"] ?? throw new NullReferenceException("RapidApi key not found");
+            _httpClient.DefaultRequestHeaders.Add("x-rapidapi-key", _rapidApiKey);
+            _httpClient.DefaultRequestHeaders.Add("x-rapidapi-host", "systran-systran-platform-for-language-processing-v1.p.rapidapi.com");
             _logger = logger;
         }
 
@@ -45,17 +46,8 @@ namespace XLocalizer.Translate.SystranTranslate
         /// <returns><see cref="TranslationResult"/></returns>
         public async Task<TranslationResult> TranslateAsync(string source, string target, string text, string format)
         {
-            if (string.IsNullOrWhiteSpace(_rapidApiKey))
-            {
-                throw new NullReferenceException(nameof(_rapidApiKey));
-            }
-
             try
             {
-
-                _httpClient.DefaultRequestHeaders.Add("x-rapidapi-key", _rapidApiKey);
-                _httpClient.DefaultRequestHeaders.Add("x-rapidapi-host", "systran-systran-platform-for-language-processing-v1.p.rapidapi.com");
-
                 var response = await _httpClient.GetAsync($"https://systran-systran-platform-for-language-processing-v1.p.rapidapi.com/translation/text/translate?source={source}&target={target}&input={text}");
                 _logger.LogInformation($"Response: {ServiceName} - {response.StatusCode}");
                 /*

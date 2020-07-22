@@ -18,7 +18,7 @@
 			- HttpClient implementation updated as https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests
 			Release notes: https://github.com/LazZiya/XLocalizer.Translate.SystranTranslate/releases
 		</PackageReleaseNotes>
-		<Version>1.0.0-prv3</Version>
+		<Version>1.0.0-prv4</Version>
 		<AssemblyVersion>1.0.0.0</AssemblyVersion>
 		<FileVersion>1.0.0.0</FileVersion>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
