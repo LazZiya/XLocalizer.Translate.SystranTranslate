@@ -19,3 +19,4 @@ services.AddHttpClient<ITranslator, SystranTranslateService>();
 ````
 
 Repository: https://github.com/LazZiya/XLocalizer.Translate.SystranTranslate
+Docs: https://docs.ziyad.info/en/XLocalizer/v1.0/translate-services-systran.md
