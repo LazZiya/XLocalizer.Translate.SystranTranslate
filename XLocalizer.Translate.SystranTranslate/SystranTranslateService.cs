@@ -16,7 +16,7 @@ namespace XLocalizer.Translate.SystranTranslate
         /// <summary>
         /// Service name
         /// </summary>
-        public string ServiceName => "SYSTRAN.io Translate";
+        public string ServiceName => "SYSTRAN.io Translate - RapidApi";
 
         private readonly HttpClient _httpClient;
         private readonly ILogger _logger;
