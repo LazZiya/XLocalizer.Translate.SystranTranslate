@@ -9,9 +9,9 @@ using System.Net;
 namespace XLocalizer.Translate.SystranTranslate
 {
     /// <summary>
-    /// SYSTRAN.io translation service
+    /// SYSTRAN.io translation service via RapidApi
     /// </summary>
-    public class SystranTranslateService : ITranslator
+    public class SystranTranslateServiceRapidApi : ITranslator
     {
         /// <summary>
         /// Service name
@@ -27,7 +27,7 @@ namespace XLocalizer.Translate.SystranTranslate
         /// <param name="httpClient"></param>
         /// <param name="configuration"></param>
         /// <param name="logger"></param>
-        public SystranTranslateService(HttpClient httpClient, IConfiguration configuration, ILogger<SystranTranslateService> logger)
+        public SystranTranslateServiceRapidApi(HttpClient httpClient, IConfiguration configuration, ILogger<SystranTranslateServiceRapidApi> logger)
         {
             _httpClient = httpClient ?? throw new NullReferenceException(nameof(httpClient));
             var _rapidApiKey = configuration["XLocalizer.Translate:RapidApiKey"] ?? throw new NullReferenceException("RapidApi key not found");

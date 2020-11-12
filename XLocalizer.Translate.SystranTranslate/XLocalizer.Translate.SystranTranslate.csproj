@@ -14,6 +14,7 @@
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageTags>asp.net, core, razor, mvc, localization, globalization, translation, services</PackageTags>
 		<PackageReleaseNotes>
+			- Rename to SystranTranslateServiceRapidApi
 			Release notes: https://github.com/LazZiya/XLocalizer.Translate.SystranTranslate/releases
 		</PackageReleaseNotes>
 		<VersionPrefix>1.0.0</VersionPrefix>
