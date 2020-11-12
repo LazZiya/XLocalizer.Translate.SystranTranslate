@@ -1,22 +1,6 @@
 ﻿XLocalizer.Translate.SystranTranslate
 
-Instructions to use this package :
+IMPORTANT NOTICE: visit the docs page to learn how to setup the translation service.
 
-- This package requires Rapid API Key, must be obtained from https://rapidapi.com/systran/api/systran-io-translation-and-nlp
-- Add the API key to user secrets :
-
-````
-{
-  "XLocalizer.Translate": {
-    "RapidApiKey": "xxx-rapid-api-key-xxx"
-  }
-}
-````
-
-- Register in startup:
-````
-services.AddHttpClient<ITranslator, SystranTranslateService>();
-````
-
-Repository: https://github.com/LazZiya/XLocalizer.Translate.SystranTranslate
-Docs: https://docs.ziyad.info/en/XLocalizer/v1.0/translate-services-systran.md
+- Docs: https://docs.ziyad.info/en/XLocalizer/v1.0/translate-services-systran.md
+- Repository: https://github.com/LazZiya/XLocalizer.Translate.SystranTranslate
