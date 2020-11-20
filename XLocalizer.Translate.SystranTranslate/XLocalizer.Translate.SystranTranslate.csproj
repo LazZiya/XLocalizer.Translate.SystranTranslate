@@ -14,7 +14,8 @@
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageTags>asp.net, core, razor, mvc, localization, globalization, translation, services</PackageTags>
 		<PackageReleaseNotes>
-			- Fix an issue for throwing the correct exception when no key is provided.
+			- Fix an issue to throw the correct exception when no API key is provided
+			- Throw more user friendly exception when no API key is provided.
 			Release notes: https://github.com/LazZiya/XLocalizer.Translate.SystranTranslate/releases
 		</PackageReleaseNotes>
 		<VersionPrefix>1.0.1</VersionPrefix>
